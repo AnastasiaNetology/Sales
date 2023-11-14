@@ -1,4 +1,5 @@
 package ru.netology.stats;
+
 public class StatsService {
     public int minSales(long[] sales) {
         int minMonth = 0;                                              //минимум продаж
@@ -10,6 +11,7 @@ public class StatsService {
         }
         return minMonth + 1;
     }
+
     public int maxSales(long[] sales) {
         int maxMonth = 0;                                               //пик продаж
 
@@ -20,17 +22,20 @@ public class StatsService {
         }
         return maxMonth + 1;
     }
-    public int SumOfSales(long[] sales) {
+
+    public long sumOfSales(long[] sales) {
         long totalSale = 0;                                            //сумма всех продаж
 
         for (long sale : sales) {
             totalSale += sale;
         }
-        return (int) totalSale;
+        return totalSale;
     }
+
     public long averageSales(long[] sales) {
-        return SumOfSales(sales) / sales.length;                      //средняя сумма продаж в месяц
+        return sumOfSales(sales) / sales.length;                      //средняя сумма продаж в месяц
     }
+
     public int bellowAverage(long[] sales) {                          //ниже среднего
         long average = averageSales(sales);
         int culc = 0;
@@ -41,6 +46,7 @@ public class StatsService {
         }
         return culc;
     }
+
     public long aboveAverage(long[] sales) {                          //выше среднего
         long average = averageSales(sales);
         int culc = 0;

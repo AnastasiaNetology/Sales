@@ -28,11 +28,11 @@ public class StatsServiceTest {
     }
 
     @Test
-    public void SumOfSales() {
+    public void sumOfSales() {
         StatsService services = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expected = 8 + 15 + 13 + 15 + 17 + 20 + 19 + 20 + 7 + 14 + 32;
-        long actual = services.SumOfSales(sales);
+        long actual = services.sumOfSales(sales);
 
         Assertions.assertEquals(expected, actual);
     }
